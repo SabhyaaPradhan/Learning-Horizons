@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Horizons</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/scss/style.scss">
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Links -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/img/Learning-1.png">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 6s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        },
+                    }
+                },
+            },
+        };
+    </script>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+    <!-- Preloder -->
+
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-1 bar">
+            </div>
+            <div class="loader-2 bar">
+            </div>
+        </div>
+
+        <div class="counter">
+            <div class="counter-1 digit">
+                <div class="num">0</div>
+                <div class="num num1offset1">1</div>
+            </div>
+            <div class="counter-2 digit">
+                <div class="num">0</div>
+                <div class="num num1offset2">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num">0</div>
+            </div>
+            <div class="counter-3 digit">
+                <div class="num">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+            </div>
+            <div class="percent">%</div>
+        </div>
+    </div>
+
+    <!-- NavBar -->
+    <header class="header">
+        <a href="#" class="logo"><img src="./assets/img/Learning.png" alt=""></a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <i class="bx bx-x" id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">Home</a>
+            <a href="about.html" style="--i:1;">About</a>
+            <a href="contact.html" style="--i:2;">Contact Us</a>
+            <a href="book.html" style="--i:3;">Our Books</a>
+            <a href="#" style="--i:4;">Authors</a>
+            <a href="#" style="--i:5;">Publishers</a>
+        </nav>
+    </header>
+
+    <!-- Image Slider -->
+    <div id="main">
+        <div id="back">
+            <img src="./assets/img/img1.jpg" alt="Image 1">
+            <img src="./assets/img/img2.jpg" alt="Image 2">
+            <img src="./assets/img/img3.jpg" alt="Image 3">
+            <img src="./assets/img/img4.jpg" alt="Image 4">
+            <img src="./assets/img/img5.jpg" alt="Image 5">
+        </div>
+        <div id="top">
+            <div id="workingarea">
+                <div id="hero">
+                    <div id="heroleft">
+                        <div class="elem">
+                            <h1>Best Sellers</h1>
+                            <h1>New Arrivals</h1>
+                            <h1>Get To</h1>
+                            <h1>Meet Our</h1>
+                            <h1>Learn About</h1>
+                        </div>
+                        <div class="elem">
+                            <h1>Explore Top</h1>
+                            <h1>Explore The</h1>
+                            <h1>Know Us</h1>
+                            <h1>Talented Author</h1>
+                            <h1>Our Collaborative</h1>
+                        </div>
+                        <div class="elem">
+                            <h1>Picks!</h1>
+                            <h1>Latest!</h1>
+                            <h1>Better.</h1>
+                            <h1>Team.</h1>
+                            <h1>Publishers.</h1>
+                        </div>
+                        <button class="hero-btn">Explore Now</button>
+                    </div>
+                    <div id="heroright">
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <div id="imagediv"></div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quis odio officiis sed
+                            nihil ab, velit omnis. Aspernatur dignissimos, reprehenderit neque dolore ullam, labore
+                            eligendi corporis quos dolores vero nam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TExt -->
+    <section class="marquee">
+        <div class="marquee__inner">
+            <div class="marquee__part">
+                Learning Horizons
+                <div class="arrow">
+                    <img src="./assets/img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="marquee__part">
+                Learning Horizons
+                <div class="arrow">
+                    <img src="./assets/img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="marquee__part">
+                Learning Horizons
+                <div class="arrow">
+                    <img src="./assets/img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="marquee__part">
+                Learning Horizons
+                <div class="arrow">
+                    <img src="./assets/img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="marquee__part">
+                Learning Horizons
+                <div class="arrow">
+                    <img src="./assets/img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="marquee__part">
+                Learning Horizons
+                <div class="arrow">
+                    <img src="./assets/img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="marquee__part">
+                Learning Horizons
+                <div class="arrow">
+                    <img src="./assets/img/arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ABOUT=============== -->
+    <section style="display: grid; place-items: center; border-bottom: 2px solid #fff;">
+        <div id="bg-about">
+            <img src="https://images.unsplash.com/photo-1527176930608-09cb256ab504?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+            <img src="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+        </div>
+        <div class="about-container">
+            <div class="about-contentLeft">
+                <div class="about-row">
+                    <div class="imgWrapper">
+                        <img src="https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="imgWrapper">
+                        <img src="https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="imgWrapper">
+                        <img src="https://images.pexels.com/photos/2128249/pexels-photo-2128249.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="imgWrapper">
+                        <img src="https://images.pexels.com/photos/1148399/pexels-photo-1148399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about-contentRight">
+                <div class="about-content">
+                    <h4>Learning Horizons Publishing Pvt. Ltd.</h4>
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ullam saepe, totam dicta fuga
+                        provident. Fuga, labore porro? Dolorem unde, explicabo atque voluptatum laborum harum, quas
+                        velit voluptates sit rerum non ullam laboriosam iusto ad sequi hic soluta consequatur quaerat!
+                    </p>
+                    <a href="about.html" class=".about-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="relative font-inter antialiased">
+
+        <main class="relative flex flex-col justify-center bg-black overflow-hidden">
+            <div>
+
+                <!-- CTA animation -->
+                <section class="relative z-0" style="font-family: Poppins;">
+                    <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-28">
+                        <div class="text-center">
+                            <a class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 items-center justify-center text-3xl sm:text-4xl md:text-5xl font-semibold text-white before:absolute before:inset-0 hover:before:bg-blue-950 before:-z-10 before:transition-colors before:duration-500 group"
+                                href="#">
+
+                                <!-- Button -->
+                                <span
+                                    class="relative p-0.5 rounded-full bg-gray-200 group-hover:bg-blue-800 transition duration-500 overflow-hidden flex items-center justify-center before:opacity-0 group-hover:before:opacity-100 before:absolute before:w-1/2 before:pb-[100%] before:bg-[linear-gradient(90deg,_theme(colors.indigo.500/0)_0%,_theme(colors.indigo.500)_35%,_theme(colors.indigo.200)_50%,_theme(colors.indigo.500)_65%,_theme(colors.indigo.500/0)_100%)] before:animate-[spin_3s_linear_infinite]">
+                                    <span class="relative whitespace-nowrap">
+                                        <!-- Default content -->
+                                        <span
+                                            class="block px-8 py-6 rounded-full bg-gradient-to-r from-gray-900 to-gray-800 z-10 group-hover:opacity-0 transition-opacity duration-500 ease-in-out"
+                                            style="font-size: 39px;">Transform your dreams!</span>
+                                        <!-- Hover content -->
+                                        <span
+                                            class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-950 to-blue-900 z-10 inline-flex items-center whitespace-nowrap overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500 before:bg-clip-text before:text-transparent before:bg-gradient-to-r before:from-sky-500 before:to-sky-300 after:bg-clip-text after:text-transparent after:bg-gradient-to-r after:from-sky-500 after:to-sky-300 before:content-['Explore_our_works'] after:content-['Explore_our_works'] before:px-2 after:px-2 before:animate-infinite-scroll after:animate-infinite-scroll"
+                                            aria-hidden="true"></span>
+                                    </span>
+                                </span>
+
+                                <span class="group-hover:text-blue-300 transition-colors duration-500 ease-in-out"
+                                    style="font-size: 34.9px;">with Learning Horizons</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- End: CTA animation -->
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Products -->
+    <section class="product">
+
+        <div id="particles-js"></div>
+
+
+        <!-- Best Sellers -->
+
+        <h2 class="product-category" data-text="New Arrivals">Best Sellers</h2>
+        <div class="product-container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="./assets/img/asian class 4.jpg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Anil Pradhan
+                            </h4>
+                            <span class="type">
+                                Startup Computing
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/384.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Rayquaza
+                            </h4>
+                            <span class="type">
+                                Dragon, Flying
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="./assets/img/asia class 6.jpg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Anil Pradhan
+                            </h4>
+                            <span class="type">
+                                Startup Computing
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/249.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Lugia
+                            </h4>
+                            <span class="type">
+                                Psychic, Flying
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="./assets/img/asia class 2.jpg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Anil Pradhan
+                            </h4>
+                            <span class="type">
+                                Startup Computing
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/383.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Groudon
+                            </h4>
+                            <span class="type">
+                                Ground
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+        </div>
+
+        <!-- New Arrivals -->
+        <h2 class="product-category" data-text="New Arrivals">New Arrivals</h2>
+        <div class="product-container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/487.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Giratina
+                            </h4>
+                            <span class="type">
+                                $400
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/384.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Rayquaza
+                            </h4>
+                            <span class="type">
+                                $400
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/646.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Kyrum
+                            </h4>
+                            <span class="type">
+                                $400
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/249.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Lugia
+                            </h4>
+                            <span class="type">
+                                $400
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/487.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Giratina
+                            </h4>
+                            <span class="type">
+                                $400
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/383.svg"
+                            alt="">
+                        <div class="info">
+                            <h4 class="name">
+                                Groudon
+                            </h4>
+                            <span class="type">
+                                $400
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Select -->
+
+    <div class="select">
+		<ul>
+			<li>
+				<div class="link">
+					<span>Authors</span>
+					<a href="#" style="height: 30px; position: relative;"><i class='bx bx-right-arrow-alt' style="font-size: 80px;"></i></a>
+					<div class="hover-reveal image01">
+						<img class="hidden-img" src="https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?q=80&w=1908&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="link">
+					<span>Publishers</span>
+                    <a href="#" style="height: 30px; position: relative;"><i class='bx bx-right-arrow-alt' style="font-size: 80px;"></i></a>
+					<div class="hover-reveal image01">
+						<img class="hidden-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="link">
+					<span>Our Works</span>
+                    <a href="#" style="height: 30px; position: relative;"><i class='bx bx-right-arrow-alt' style="font-size: 80px;"></i></a>
+					<div class="hover-reveal image01">
+						<img class="hidden-img" src="https://images.unsplash.com/photo-1536985576470-b7e4a0363a19?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+    <!-- Contact Us -->
+
+    <div class="contact-section">
+        <div class="contact-details col">
+            <p>
+                Have Questions? Get in Touch with Us Today!
+            </p>
+
+            <div class="social-media item">
+                <h3>Social Media</h3>
+                <span>TWITTER - INSTAGRAM - TWITTER</span>
+            </div>
+
+            <div class="contact-info">
+                <div class="email item">
+                    <h3>Get in touch</h3>
+                    <span>learning.horizons3@gmail.com 
+                        <br><br>
+                        +977 9844501877
+                    </span>
+                </div>
+
+                <div class="address item">
+                    <h3>location</h3>
+                    <span>budhanilkatha, karhmandu, nepal <br> <br>
+                        lebong cart road, darjeeling, west-bengal, india
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form col">
+            <div class="wrapper">
+                <div class="row">
+                    <input type="text" placeholder="Name" />    
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Company" />
+                </div>
+                <div class="row">
+                    <textarea name="" type="text" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                </div>
+                <div class="row submit">
+                    <a href="#">Submit</a>
+                    <div class="send-icon"><i class='bx bx-right-arrow-alt'></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>learning horizons</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Authors</a></li>
+                        <li><a href="#">Publishers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Our Books</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <hr style="width:80%; margin: 30px auto;">
+            </div>
+        </div>
+        <div class="footer-lower">
+            <h4>Copyright © <a href="index.html">Learning Horizons Pvt. Ltd</a> All Rights Reserved</h4>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="particles.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery(".container-wrap").append(
+                "<ul class='circles'><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>"
+            );
+        }); 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            autoplay: {
+                delay: 3000
+            },
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 3,
+                slideShadows: true
+            },
+            spaceBetween: 50,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counter3 = document.querySelector(".counter-3");
+
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 10; j++) {
+                    const div = document.createElement("div")
+                    div.className = "num";
+                    div.textContent = j;
+                    counter3.appendChild(div);
+                }
+            }
+
+            const finalDiv = document.createElement("div")
+            finalDiv.className = "num"
+            finalDiv.textContent = "0"
+            counter3.appendChild(finalDiv)
+
+            function animate(counter, duration, delay = 0) {
+                const numHeight = counter.querySelector(".num").clientHeight;
+                const totalDistance = (counter.querySelectorAll(".num").length - 1) * numHeight
+
+                gsap.to(counter, {
+                    y: -totalDistance,
+                    duration: duration,
+                    delay: delay,
+                    ease: "power2.inOut",
+                })
+            }
+
+            animate(counter3, 5)
+            animate(document.querySelector(".counter-2"), 6)
+            animate(document.querySelector(".counter-1"), 2, 4)
+        })
+
+        gsap.to(".digit", {
+            top: "-150px",
+            stagger: {
+                amount: 0.25,
+            },
+            delay: 6,
+            duration: 1,
+            ease: "power4.inOut"
+        })
+
+        gsap.from(".loader-1", {
+            width: 0,
+            duration: 6,
+            ease: "power2.inOut"
+        })
+
+        gsap.from(".loader-2", {
+            width: 0,
+            delay: 1.9,
+            duration: 2,
+            ease: "power2.inOut"
+        })
+
+        gsap.to(".loader", {
+            background: "none",
+            delay: 6,
+            duration: 0.1,
+        })
+
+        gsap.to(".loader-1", {
+            rotate: 90,
+            y: -50,
+            duration: 0.5,
+            delay: 6,
+        })
+
+        gsap.to(".loader-2", {
+            x: -75,
+            y: 75,
+            duration: 0.5,
+        },
+            "<"
+        )
+
+        gsap.to(".loader", {
+            scale: 40,
+            duration: 1,
+            delay: 7,
+            ease: "power2.inOut"
+        })
+
+        gsap.to(".loader", {
+            rotate: 45,
+            y: 500,
+            x: 2000,
+            duration: 1,
+            delay: 7,
+            ease: "power2.inOut"
+        })
+
+        gsap.to(".loading-screen", {
+            opacity: 0,
+            duration: 0.5,
+            delay: 7.5,
+            ease: "power1.inOut"
+        })
+
+        gsap.to(".header", 1.5, {
+            delay: 7,
+            y: 0,
+            ease: "power4.inOut",
+            stagger: {
+                amount: 0.1,
+            },
+        });
+    </script>
+
+    <script>
+        let currentScroll = 0;
+        let isScrollingDown = true;
+        let arrows = document.querySelectorAll(".arrows");
+
+        // Set up the GSAP tween for the marquee animation
+        let tween = gsap.to(".marquee__part", {
+            xPercent: -100,
+            repeat: -1,
+            duration: 5,
+            ease: "linear",
+        }).totalProgress(0.5);
+
+        gsap.set(".marquee__inner", { xPercent: -50 });
+
+        window.addEventListener("scroll", function () {
+            if (window.pageYOffset > currentScroll) {
+                isScrollingDown = true;
+            } else {
+                isScrollingDown = false;
+            }
+
+            gsap.to(tween, {
+                timeScale: isScrollingDown ? 1 : -1,
+            });
+
+            arrows.forEach((arrow) => {
+                if (isScrollingDown) {
+                    arrow.classList.remove("active");
+                } else {
+                    arrow.classList.add("active");
+                }
+            });
+
+            currentScroll = window.pageYOffset;
+        });
+
+    </script>
+
+    <script>
+
+        Shery.imageEffect("#bg-about", { style: 5, config: { "a": { "value": 2, "range": [0, 30] }, "b": { "value": -0.77, "range": [-1, 1] }, "zindex": { "value": -9996999, "range": [-9999999, 9999999] }, "aspect": { "value": 2.082236837977518 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": false }, "growSize": { "value": 4.1, "range": [1, 15] }, "durationOut": { "value": 2.23, "range": [0.1, 5] }, "durationIn": { "value": 1.22, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": true }, "maskVal": { "value": 1.15, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 1 }, "noise_speed": { "value": 0.53, "range": [0, 10] }, "metaball": { "value": 0.12, "range": [0, 2], "_gsap": { "id": 3 } }, "discard_threshold": { "value": 0.47, "range": [0, 1] }, "antialias_threshold": { "value": 0, "range": [0, 0.1] }, "noise_height": { "value": 0.51, "range": [0, 2] }, "noise_scale": { "value": 10, "range": [0, 100] } }, gooey: true })
+
+
+
+
+        Shery.imageEffect("#back", {
+            style: 5,
+            config: { "a": { "value": 2, "range": [0, 30] }, "b": { "value": -0.97, "range": [-1, 1] }, "zindex": { "value": "-4", "range": [-9999999, 9999999] }, "aspect": { "value": 2.082236837977518 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": true }, "growSize": { "value": 5.06, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.5, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": true }, "maskVal": { "value": 1.09, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": false }, "onMouse": { "value": 1 }, "noise_speed": { "value": 0.2, "range": [0, 10] }, "metaball": { "value": 0.15, "range": [0, 2], "_gsap": { "id": 3 } }, "discard_threshold": { "value": 0.5, "range": [0, 1] }, "antialias_threshold": { "value": 0, "range": [0, 0.1] }, "noise_height": { "value": 0.5, "range": [0, 2] }, "noise_scale": { "value": 10, "range": [0, 100] } },
+            gooey: true
+        })
+
+        var elems = document.querySelectorAll(".elem")
+
+        elems.forEach(function (elem) {
+            var h1s = elem.querySelectorAll("h1")
+            var index = 0
+
+            document.querySelector("#main")
+                .addEventListener("click", function () {
+                    gsap.to(h1s[index], {
+                        top: "-=100%",
+                        ease: Expo.easeInOut,
+                        duration: 1,
+                        onComplete: function () {
+                            gsap.set(this._targets[0], { top: "100%" })
+                        }
+                    })
+
+                    index === h1s.length - 1 ? index = 0 : index++;
+
+                    gsap.to(h1s[index], {
+                        top: "-=100%",
+                        ease: Expo.easeInOut,
+                        duration: 1,
+                    })
+                })
+        })
+
+    </script>
+
+    <script>
+        const link = document.querySelectorAll('.link');
+const linkHoverReveal = document.querySelectorAll('.hover-reveal');
+const linkImages = document.querySelectorAll('.hidden-img');
+
+
+for(let i = 0; i < link.length; i++) {
+  link[i].addEventListener('mousemove', (e) => {
+    linkHoverReveal[i].style.opacity = 1;
+    linkHoverReveal[i].style.transform = `translate(-100%, -50% ) rotate(5deg)`;
+    linkImages[i].style.transform = 'scale(1, 1)';
+    linkHoverReveal[i].style.left = e.clientX + "px";
+  })
+  
+  link[i].addEventListener('mouseleave', (e) => {
+    linkHoverReveal[i].style.opacity = 0;
+    linkHoverReveal[i].style.transform = `translate(-50%, -50%) rotate(-5deg)`;
+    linkImages[i].style.transform = 'scale(0.8, 0.8)';
+  })
+}
+    </script>
+</body>
+
+</html>
